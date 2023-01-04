@@ -1,6 +1,6 @@
 print('IMC')
-peso = float(input('Qual seu peso'))
-altura = float(input('Qual sua altura'))
+peso = float(input('Qual seu peso: '))
+altura = float(input('Qual sua altura: '))
 formula = peso / (altura * 2)
 
 if formula < 18.5:
