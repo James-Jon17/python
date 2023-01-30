@@ -1,14 +1,18 @@
 lista = []
-for c in range(0, 5):
+while True:
     n = int(input('Digite um valor: '))
-    if c == 0 or n > lista[-1]:
+    if n not in lista:
         lista.append(n)
     else:
-        pos = 0
-        while pos < len(lista):
-            if n <= lista[pos]:
-                lista.insert(pos, n)
-                break
-            pos += 1
-
+        print('Valor já inserido! Não farei novamente...')
+    r = str(input('Deseja continuar [S/N]: ')).lower().strip()[0]
+    if r in 'Nn':
+        break
+print('=-' * 30)
+lista.sort(reverse=True)
+print(f'O tamanho da sua lista foi {len(lista)}')
 print(f'Os valores digitados foram {lista}')
+if 5 in lista:
+    print('O 5 foi encontrado na lista')
+else:
+    print('O 5 não foi encontrado na lista')
