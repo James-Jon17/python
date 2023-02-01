@@ -17,6 +17,7 @@ while continuar:
         continuar = False
 
 print('Dados coletados')
+print(f'Foram {len(dados)} pessoas cadastradas.')
 for d in dados:
     print(f'Nome: {d[0]}, Idade: {d[1]}')
 idade = [dado[1] for dado in dados]
